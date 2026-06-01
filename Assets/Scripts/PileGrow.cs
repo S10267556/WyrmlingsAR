@@ -6,7 +6,10 @@ public class PileGrow : MonoBehaviour
     private GameObject nextPile; //Assign the next pile to be activated when the toys are added to the current pile
 
     [SerializeField]
-    private GameObject finishedMessage; //Assign a Canvas to display a congratulatory message when the activity is finished
+    private GameObject finishedMessage; //Assign UI to display a congratulatory message when the activity is finished
+
+    [SerializeField]
+    private GameObject instructionMessage; //Assign a UI to display information when the activity starts
 
     [SerializeField]
     private bool isLastPile; //Check to determine whether the current pile is the last one
@@ -28,6 +31,7 @@ public class PileGrow : MonoBehaviour
         {
             Destroy(collider.gameObject);
             finishedMessage.SetActive(true);
+            instructionMessage.SetActive(false);
             Debug.Log("pile done");
         }
     }

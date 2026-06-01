@@ -27,3 +27,13 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: background
     m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5493368944836486903
+      m_GuidHigh: 2163308152320582318
+    m_SerializedTextureGuid:
+      m_GuidLow: 1537012854192583006
+      m_GuidHigh: 16543485382580202251
+    m_Size: {x: 0.5, y: 0.5}
+    m_SpecifySize: 1
+    m_Name: spelling
+    m_Texture: {fileID: 0}
