@@ -13,6 +13,9 @@ public class LetterPress : MonoBehaviour
     [SerializeField]
     private bool isLastLetter;
 
+    [SerializeField]
+    private bool newActivity; //If it is a new activity, this checks to see if the currentLetterIndex should be resetted to 0
+
     private static int currentLetterIndex = 0; //The current letter the player is on
 
     public List<string> letterList = new List<string>(); //List of the correct letters
@@ -32,6 +35,13 @@ public class LetterPress : MonoBehaviour
 
     public void pressLetter()
     {
+        if (newActivity)
+        {
+            currentLetterIndex = 0;
+            newActivity = false;
+            
+        }
+
         mistakeMessage.SetActive(false); //Remove the mistake message if the player presses another button after it appears
 
         if (isCorrect && (letterIndex == currentLetterIndex) && !isLastLetter)
