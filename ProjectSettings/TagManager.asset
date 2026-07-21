@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Toy
+  - Toothbrush
+  - Paintbrush
+  - RedPaintBottle
+  - GreenPaintBottle
   layers:
   - Default
   - TransparentFX

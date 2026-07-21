@@ -24,7 +24,7 @@ MonoBehaviour:
       m_GuidLow: 13133667336657676232
       m_GuidHigh: 14313494248703112712
     m_Size: {x: 0.5, y: 0.6666667}
-    m_SpecifySize: 1
+    m_SpecifySize: 0
     m_Name: background
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
@@ -34,6 +34,26 @@ MonoBehaviour:
       m_GuidLow: 1537012854192583006
       m_GuidHigh: 16543485382580202251
     m_Size: {x: 0.5, y: 0.5}
-    m_SpecifySize: 1
+    m_SpecifySize: 0
     m_Name: spelling
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4682338110185210321
+      m_GuidHigh: 8415772332673856414
+    m_SerializedTextureGuid:
+      m_GuidLow: 11116236900570908320
+      m_GuidHigh: 9460253797281068200
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: walk
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4965078308481630468
+      m_GuidHigh: 14650204940606664621
+    m_SerializedTextureGuid:
+      m_GuidLow: 8994918079225813953
+      m_GuidHigh: 15912900487109258793
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: help
     m_Texture: {fileID: 0}
