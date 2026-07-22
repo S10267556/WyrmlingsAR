@@ -346,6 +346,7 @@ MonoBehaviour:
   finishUI: {fileID: 2364910964384189752}
   selectGameGroup: {fileID: 677457524097396982}
   selectActivityGroup: {fileID: 1429148525593947332}
+  brushObject: {fileID: 5968800976616245731}
 --- !u!1 &1429148525593947332
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,7 +827,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6196a48a47a85b42ab593d5c3a4d7a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PaintNails
-  paintedNailCount: 0
   greenColour: {fileID: 2100000, guid: c6cbf46531431954b8d635ac15e4c215, type: 2}
   redColour: {fileID: 2100000, guid: d20f6939801976d4f91fb863c5d82a03, type: 2}
   paintedNail: 0
@@ -835,6 +835,7 @@ MonoBehaviour:
   finishUI: {fileID: 2364910964384189752}
   selectGameGroup: {fileID: 677457524097396982}
   selectActivityGroup: {fileID: 580897235380650059}
+  brushObject: {fileID: 8357168027987586684}
 --- !u!1 &3238288998902002335
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,6 +968,7 @@ MonoBehaviour:
   finishUI: {fileID: 2364910964384189752}
   selectGameGroup: {fileID: 677457524097396982}
   selectActivityGroup: {fileID: 1429148525593947332}
+  brushObject: {fileID: 5968800976616245731}
 --- !u!1 &3413457179641047383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,7 +1231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6196a48a47a85b42ab593d5c3a4d7a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PaintNails
-  paintedNailCount: 0
   greenColour: {fileID: 2100000, guid: c6cbf46531431954b8d635ac15e4c215, type: 2}
   redColour: {fileID: 2100000, guid: d20f6939801976d4f91fb863c5d82a03, type: 2}
   paintedNail: 0
@@ -1238,6 +1239,7 @@ MonoBehaviour:
   finishUI: {fileID: 2364910964384189752}
   selectGameGroup: {fileID: 677457524097396982}
   selectActivityGroup: {fileID: 580897235380650059}
+  brushObject: {fileID: 8357168027987586684}
 --- !u!1 &3629794623399957184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,7 +1365,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6196a48a47a85b42ab593d5c3a4d7a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PaintNails
-  paintedNailCount: 0
   greenColour: {fileID: 2100000, guid: c6cbf46531431954b8d635ac15e4c215, type: 2}
   redColour: {fileID: 2100000, guid: d20f6939801976d4f91fb863c5d82a03, type: 2}
   paintedNail: 0
@@ -1372,6 +1373,7 @@ MonoBehaviour:
   finishUI: {fileID: 2364910964384189752}
   selectGameGroup: {fileID: 677457524097396982}
   selectActivityGroup: {fileID: 580897235380650059}
+  brushObject: {fileID: 8357168027987586684}
 --- !u!1 &4247738865722028386
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,9 +2260,10 @@ MonoBehaviour:
   dirtCount: 3
   finishBrushUI: {fileID: 0}
   finishPaintUI: {fileID: 0}
-  finishUI: {fileID: 0}
+  finishUI: {fileID: 2364910964384189752}
   selectGameGroup: {fileID: 677457524097396982}
   selectActivityGroup: {fileID: 0}
+  brushObject: {fileID: 5968800976616245731}
 --- !u!54 &3318881307222212673
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3333,15 +3336,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6196a48a47a85b42ab593d5c3a4d7a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PaintNails
-  paintedNailCount: 0
-  greenColour: {fileID: 0}
-  redColour: {fileID: 0}
+  greenColour: {fileID: 2100000, guid: c6cbf46531431954b8d635ac15e4c215, type: 2}
+  redColour: {fileID: 2100000, guid: d20f6939801976d4f91fb863c5d82a03, type: 2}
   paintedNail: 0
   finishBrushUI: {fileID: 0}
   finishPaintUI: {fileID: 0}
-  finishUI: {fileID: 0}
+  finishUI: {fileID: 2364910964384189752}
   selectGameGroup: {fileID: 677457524097396982}
   selectActivityGroup: {fileID: 0}
+  brushObject: {fileID: 8357168027987586684}
 --- !u!1 &9071802960679105644
 GameObject:
   m_ObjectHideFlags: 0
@@ -3474,3 +3477,4 @@ MonoBehaviour:
   finishUI: {fileID: 2364910964384189752}
   selectGameGroup: {fileID: 677457524097396982}
   selectActivityGroup: {fileID: 1429148525593947332}
+  brushObject: {fileID: 5968800976616245731}

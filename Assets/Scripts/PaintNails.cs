@@ -4,8 +4,7 @@ using System.Collections;
 
 public class PaintNails : MonoBehaviour
 {
-    [SerializeField]
-    private int paintedNailCount = 0; //counts how many nails have already been painted
+    public static int paintedNailCount = 0; //counts how many nails have already been painted
 
     [SerializeField]
     private Material greenColour;
@@ -26,8 +25,6 @@ public class PaintNails : MonoBehaviour
     [SerializeField]
     private GameObject finishPaintUI; //UI for finishing painting nails - shows that the activity is complete and prevents the button from being pressed
 
-    public static int helpGamesCompleted = 0; //Count of how many games that help daffodil have been done
-
     [SerializeField]
     private GameObject finishUI; //UI for when both activities are complete?
 
@@ -41,6 +38,12 @@ public class PaintNails : MonoBehaviour
     private Vector3 originalPosition;
 
     private XRGrabInteractable grab;
+
+    [SerializeField]
+    private GameObject brushObject;
+
+    [SerializeField]
+    private BrushTeeth brushTeeth;
 
     void Start()
     {
@@ -60,14 +63,15 @@ public class PaintNails : MonoBehaviour
             paintedNail = true;
             if (paintedNailCount >= 3)
             {
-                finishBrushUI.SetActive(true);
+                Destroy(brushObject);
+                finishPaintUI.SetActive(true);
                 selectGameGroup.SetActive(true);
-                helpGamesCompleted++; //adds 1 to how many games that help daffodil have been done
+                BrushTeeth.helpGamesCompleted++; //adds 1 to how many games that help daffodil have been done
                 selectActivityGroup.SetActive(false); //disable activity
-                Destroy(gameObject);
+                Debug.Log("games Com" + BrushTeeth.helpGamesCompleted);
 
                 //Bring the player back to the selection screen once all dirt spot have been cleaned + blanks out the activity
-                if (helpGamesCompleted >= 2)
+                if (BrushTeeth.helpGamesCompleted == 2)
                 {
                    finishUI.SetActive(true);
                 }
@@ -81,28 +85,33 @@ public class PaintNails : MonoBehaviour
             paintedNail = true;
             if (paintedNailCount >= 3)
             {
-                finishBrushUI.SetActive(true);
+                Destroy(brushObject);
+                finishPaintUI.SetActive(true);
                 selectGameGroup.SetActive(true);
-                helpGamesCompleted++; //adds 1 to how many games that help daffodil have been done
+                BrushTeeth.helpGamesCompleted++; //adds 1 to how many games that help daffodil have been done
                 selectActivityGroup.SetActive(false); //disable activity
-                Destroy(gameObject);
+                Debug.Log("games Com" + BrushTeeth.helpGamesCompleted);
 
                 //Bring the player back to the selection screen once all dirt spot have been cleaned + blanks out the activity
-                if (helpGamesCompleted >= 2)
+                if (BrushTeeth.helpGamesCompleted == 2)
                 {
                    finishUI.SetActive(true);
                 }
             }
-            else if (other.CompareTag("RedPaintbottle"))
-            {
-                isRed = true;
-                isGreen = false;
-            }
-            else if (other.CompareTag("GreenPaintbottle"))
-            {
-                isRed = false;
-                isGreen = true;
-            }
+        }
+        else if (other.CompareTag("RedPaintBottle"))
+        {
+            isRed = true;
+            isGreen = false;
+            Renderer bottleRenderer = GetComponent<Renderer>();
+            bottleRenderer.material = redColour;
+        }
+        else if (other.CompareTag("GreenPaintBottle"))
+        {
+            isRed = false;
+            isGreen = true;
+            Renderer bottleRenderer = GetComponent<Renderer>();
+            bottleRenderer.material = greenColour;
         }
     }
 

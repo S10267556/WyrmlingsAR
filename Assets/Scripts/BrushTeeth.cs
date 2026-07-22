@@ -18,7 +18,7 @@ public class BrushTeeth : MonoBehaviour //script placed on all dirt spots in the
     [SerializeField]
     private GameObject finishPaintUI; //UI for finishing painting nails - shows that the activity is complete and prevents the button from being pressed
 
-    public static int helpGamesCompleted = 0; //Count of how many games that help daffodil have been done
+    public static int helpGamesCompleted; //Count of how many games that help daffodil have been done
 
     [SerializeField]
     private GameObject finishUI; //UI for when both activities are complete?
@@ -37,6 +37,9 @@ public class BrushTeeth : MonoBehaviour //script placed on all dirt spots in the
     private float remainingDirtSize;
 
     private Vector3 originalScale;
+
+    [SerializeField]
+    private GameObject brushObject;
 
 
     void Start()
@@ -66,14 +69,14 @@ public class BrushTeeth : MonoBehaviour //script placed on all dirt spots in the
                 Destroy(gameObject); //Destorys the dirt spot
                 if(totalDirtCount >= dirtCount)
                 {
+                    Destroy(brushObject);
                     finishBrushUI.SetActive(true);
                     selectGameGroup.SetActive(true);
                     helpGamesCompleted++; //adds 1 to how many games that help daffodil have been done
                     selectActivityGroup.SetActive(false); //disable activity
-                    Destroy(gameObject);
 
                     //Bring the player back to the selection screen once all dirt spot have been cleaned + blanks out the activity
-                    if (helpGamesCompleted >= 2)
+                    if (helpGamesCompleted == 2)
                     {
                         finishUI.SetActive(true);
                     }
